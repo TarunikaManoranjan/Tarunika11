@@ -1,13 +1,13 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: linear-gradient(135deg, #fdfcfb, #e2d1c3);
-  color: #222;
-  animation: backgroundPulse 15s infinite alternate;
+  background: linear-gradient(135deg, #dff9fb, #f9ca24);
+  color: #2d3436;
+  animation: backgroundPulse 12s infinite alternate;
 }
 
 .header {
-  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  background: linear-gradient(to right, #00cec9, #0984e3);
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -22,7 +22,7 @@ body {
 }
 
 .card {
-  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  background: linear-gradient(135deg, #ff9ff3 0%, #f368e0 100%);
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   margin-bottom: 30px;
@@ -37,15 +37,15 @@ body {
 }
 
 .card h2 {
-  color: #3b3b98;
-  border-bottom: 2px dashed #3b3b98;
+  color: #6c5ce7;
+  border-bottom: 2px dashed #6c5ce7;
   padding-bottom: 10px;
   margin-bottom: 15px;
   animation: fadeIn 2s ease-in-out;
 }
 
 .buttons button {
-  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  background: linear-gradient(to right, #55efc4, #00b894);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -58,7 +58,7 @@ body {
 }
 
 .buttons button:hover {
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: linear-gradient(to right, #00b894, #55efc4);
   transform: scale(1.1);
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .popup-box {
-  background: linear-gradient(to bottom, #d4fc79, #96e6a1);
+  background: linear-gradient(to bottom, #c56cf0, #845ec2);
   padding: 30px;
   border-radius: 30px;
   max-width: 500px;
@@ -89,21 +89,22 @@ body {
   text-align: center;
   animation: scaleUp 0.7s ease-out;
   box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  color: white;
 }
 
 .popup-box h3 {
-  color: #00695c;
+  color: #f3f3f3;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
 .popup-box p {
-  color: #2e2e2e;
+  color: #fefefe;
   font-size: 16px;
 }
 
 .popup-box button {
-  background: #ff6f00;
+  background: #fd79a8;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -115,7 +116,7 @@ body {
 }
 
 .popup-box button:hover {
-  background: #e65100;
+  background: #e84393;
   transform: scale(1.05);
 }
 
@@ -138,6 +139,6 @@ body {
 }
 
 @keyframes backgroundPulse {
-  0% { background: linear-gradient(135deg, #fdfcfb, #e2d1c3); }
-  100% { background: linear-gradient(135deg, #fff1eb, #ace0f9); }
+  0% { background: linear-gradient(135deg, #dff9fb, #f9ca24); }
+  100% { background: linear-gradient(135deg, #ffeaa7, #fab1a0); }
 }
