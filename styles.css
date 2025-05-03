@@ -142,3 +142,15 @@ body {
   0% { background: linear-gradient(135deg, #dff9fb, #f9ca24); }
   100% { background: linear-gradient(135deg, #ffeaa7, #fab1a0); }
 }
+.animate-popup {
+  animation: scaleUp 0.5s ease forwards;
+}
+
+.fadeout {
+  animation: scaleDown 0.4s ease forwards;
+}
+
+@keyframes scaleDown {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.6); opacity: 0; }
+}
