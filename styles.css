@@ -425,7 +425,7 @@ body {
   color: #4a3b28;
   box-shadow: 0 6px 12px rgba(160, 82, 45, 0.2);
 }
-.profile.jpg {
+.profile-photo {
   width: 150px;
   height: 150px;
   object-fit: cover;
