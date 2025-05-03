@@ -296,3 +296,207 @@ body {
   from { transform: scale(1); opacity: 1; }
   to { transform: scale(0.6); opacity: 0; }
 }
+/* Updated CSS with beige and light brown theme and elegant font */
+
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  background: linear-gradient(135deg, #f5f5dc, #d2b48c);
+  color: #4a3b28;
+}
+
+.header {
+  background-color: #a0522d;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  animation: fadeInDown 1s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.7rem;
+}
+
+.header p {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #fff5e1;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(160, 82, 45, 0.2);
+  max-width: 800px;
+  width: 100%;
+  animation: fadeInUp 1s ease;
+}
+
+.card h2 {
+  color: #8b5e3c;
+  margin-bottom: 1rem;
+}
+
+.buttons button {
+  background-color: #deb887;
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 12px rgba(160, 82, 45, 0.3);
+}
+
+.buttons button:hover {
+  background-color: #a0522d;
+  transform: scale(1.05);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 248, 220, 0.95);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup.show {
+  display: flex;
+}
+
+.popup-box {
+  background-color: #fdf5e6;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.popup-box h3 {
+  color: #8b5e3c;
+}
+
+.popup-box p {
+  margin: 1rem 0;
+  color: #4a3b28;
+}
+
+.popup-box button {
+  padding: 0.5rem 1rem;
+  background-color: #a0522d;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(160, 82, 45, 0.3);
+}
+
+.popup-box button:hover {
+  background-color: #4a3b28;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-popup {
+  animation: scaleUp 0.5s ease forwards;
+}
+
+.fadeout {
+  animation: scaleDown 0.4s ease forwards;
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes scaleDown {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.6); opacity: 0; }
+}
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Skills</h1>
+        <p>Tools & Expertise I Have Gained</p>
+    </div>
+
+    <!-- Skills Container -->
+    <div class="container">
+        <div class="card">
+            <h2>PowerPoint</h2>
+            <p>Proficient in creating engaging presentations with a focus on clarity and visual appeal.</p>
+        </div>
+        <div class="card">
+            <h2>Canva</h2>
+            <p>Skilled in designing stunning visuals and social media posts using Canva.</p>
+        </div>
+        <div class="card">
+            <h2>InShot</h2>
+            <p>Experienced in video editing and creating polished videos using InShot for social media content.</p>
+        </div>
+        <div class="card">
+            <h2>KiCad</h2>
+            <p>Proficient in designing PCBs and schematics with KiCad software for electronics projects.</p>
+        </div>
+        <div class="card">
+            <h2>AutoCAD</h2>
+            <p>Skilled in creating 2D and 3D drawings for biomedical devices and mechanical systems using AutoCAD.</p>
+        </div>
+        <div class="card">
+            <h2>EasyEDA</h2>
+            <p>Experienced in circuit design and simulation using EasyEDA for embedded systems development.</p>
+        </div>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="buttons">
+        <button onclick="window.location.href='index.html'">Back to Main Page</button>
+    </div>
+
+</body>
+</html>
