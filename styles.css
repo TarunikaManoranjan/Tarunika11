@@ -1,16 +1,17 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #f4f4f8;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
   color: #333;
 }
 
 .header {
-  background: linear-gradient(to right, #667eea, #764ba2);
+  background: linear-gradient(to right, #ff6a00, #ee0979);
   color: white;
   padding: 40px 20px;
   text-align: center;
   animation: fadeIn 1.5s ease-in;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -20,32 +21,42 @@ body {
 }
 
 .card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: linear-gradient(to bottom right, #ffffff, #e0f7fa);
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   margin-bottom: 30px;
   padding: 25px;
   animation: slideUp 1s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h2 {
-  color: #5a67d8;
+  color: #d6336c;
+  border-bottom: 2px solid #d6336c;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .buttons button {
-  background: #5a67d8;
+  background: linear-gradient(to right, #36d1dc, #5b86e5);
   color: white;
   border: none;
   padding: 12px 20px;
   margin: 8px 10px 0 0;
-  border-radius: 10px;
+  border-radius: 12px;
+  font-weight: bold;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .buttons button:hover {
-  background: #434190;
-  transform: scale(1.05);
+  background: linear-gradient(to right, #5b86e5, #36d1dc);
+  transform: scale(1.08);
 }
 
 .popup {
@@ -66,28 +77,39 @@ body {
 }
 
 .popup-box {
-  background: white;
+  background: linear-gradient(to bottom, #ffffff, #fce4ec);
   padding: 30px;
-  border-radius: 15px;
+  border-radius: 20px;
   max-width: 500px;
   width: 90%;
   text-align: center;
   animation: scaleUp 0.5s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.popup-box h3 {
+  color: #ab47bc;
+  margin-bottom: 15px;
+}
+
+.popup-box p {
+  color: #444;
 }
 
 .popup-box button {
-  background: #e53e3e;
+  background: #ff5252;
   color: white;
   border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
+  padding: 10px 20px;
+  border-radius: 8px;
   margin-top: 20px;
   cursor: pointer;
+  font-weight: bold;
   transition: background 0.3s;
 }
 
 .popup-box button:hover {
-  background: #c53030;
+  background: #d32f2f;
 }
 
 @keyframes fadeIn {
