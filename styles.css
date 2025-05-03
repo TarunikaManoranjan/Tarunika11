@@ -425,15 +425,3 @@ body {
   color: #4a3b28;
   box-shadow: 0 6px 12px rgba(160, 82, 45, 0.2);
 }
-.profile.jpg {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #ccc;
-  margin-bottom: 10px;
-}
-.header {
-  text-align: center;
-  padding: 20px;
-}
