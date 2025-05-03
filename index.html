@@ -2,162 +2,90 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tarunika Manoranjan - Portfolio</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f6f9;
-    }
-    header {
-      background: #4b6cb7;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #4b6cb7;
-      margin-bottom: 10px;
-    }
-    .education, .profile, .hobby-boxes {
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      padding: 20px;
-    }
-    .buttons button {
-      background: #4b6cb7;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin: 10px 10px 0 0;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.6);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-    .popup-content {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      max-width: 500px;
-      text-align: center;
-    }
-    .close-btn {
-      background: crimson;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 6px;
-      margin-top: 15px;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="header">
+    <h1>Tarunika Manoranjan</h1>
+    <p>Biomedical Engineering | 2nd Year Student | Creative Explorer</p>
+  </header>
 
-<header>
-  <h1>Tarunika Manoranjan</h1>
-  <p>Biomedical Engineer | 2nd Year | Nature Enthusiast | Dancer | Influencer</p>
-</header>
+  <main class="container">
+    <section class="card education">
+      <h2>Education Background</h2>
+      <ul>
+        <li><strong>Preschool to 8th:</strong> Father Agnel School, Noida</li>
+        <li><strong>9th to 12th:</strong> SRM Public School, Guduvancherry</li>
+        <li><strong>12th Grade:</strong> 86.3%</li>
+        <li><strong>10th Grade:</strong> 94%</li>
+        <li><strong>College:</strong> SRM Institute of Science and Technology, Kattankulathur</li>
+        <li><strong>CGPA:</strong> Sem 1 - 9.39 | Sem 2 - 9.04 | Sem 3 - 9.79</li>
+      </ul>
+    </section>
 
-<div class="container">
-  <div class="education">
-    <h2>Education Background</h2>
-    <ul>
-      <li><strong>Preschool to 8th:</strong> Father Agnel School, Noida</li>
-      <li><strong>9th to 12th:</strong> SRM Public School, Guduvancherry</li>
-      <li><strong>12th Grade:</strong> 86.3%</li>
-      <li><strong>10th Grade:</strong> 94%</li>
-      <li><strong>College:</strong> SRM University, Kattankulathur</li>
-      <li><strong>CGPA:</strong> Sem 1 - 9.39 | Sem 2 - 9.04 | Sem 3 - 9.79</li>
-    </ul>
-  </div>
+    <section class="card profile">
+      <h2>About Me</h2>
+      <p>I’m a nature-loving, enthusiastic biomedical student, trained in Western dance and classical keyboard, with a love for fine arts, editing, public speaking, and creating digital content. I manage YouTube channels and enjoy giving voiceovers and MCing.</p>
+    </section>
 
-  <div class="profile">
-    <h2>About Me</h2>
-    <p>A highly enthusiastic 2nd-year Biomedical Engineering student with a love for nature, fine arts, public speaking, and media creation. With talents in Western dance, classical music, and public engagement, I thrive on sharing knowledge and experiences creatively across social media platforms.</p>
-  </div>
+    <section class="card talents">
+      <h2>My Talents</h2>
+      <div class="buttons">
+        <button onclick="openPopup('popup1')">🎨 Fine Arts & Classical Keyboard</button>
+        <button onclick="openPopup('popup2')">💃 Western Dance</button>
+        <button onclick="openPopup('popup3')">🎤 Public Speaking & MC</button>
+        <button onclick="openPopup('popup4')">📱 Influencer & YouTube</button>
+        <button onclick="openPopup('popup5')">🎬 Video Editing & Voice-over</button>
+      </div>
+    </section>
+  </main>
 
-  <div class="hobby-boxes">
-    <h2>Explore My Talents</h2>
-    <div class="buttons">
-      <button onclick="openPopup('hobbyPopup')">🎨 Fine Arts & Classical Keyboard</button>
-      <button onclick="openPopup('dancePopup')">💃 Western Dance</button>
-      <button onclick="openPopup('mcPopup')">🎤 Anchoring & Public Speaking</button>
-      <button onclick="openPopup('mediaPopup')">📱 Instagram & YouTube</button>
-      <button onclick="openPopup('editPopup')">🎬 Video Editing & Voice Over</button>
+  <!-- POPUPS -->
+  <div class="popup" id="popup1">
+    <div class="popup-box">
+      <h3>Fine Arts & Classical Keyboard</h3>
+      <p>I’m passionate about drawing and painting. A 5th-year degree holder in classical keyboard and love performing music at events.</p>
+      <button onclick="closePopup('popup1')">Close</button>
     </div>
   </div>
-</div>
-
-<!-- POPUPS -->
-
-<div class="popup" id="hobbyPopup">
-  <div class="popup-content">
-    <h3>Fine Arts & Classical Keyboard</h3>
-    <p>Passionate about drawing, painting, and instrumental music. I’m a 5th-year degree holder in classical keyboard, performing at various school events and private concerts.</p>
-    <button class="close-btn" onclick="closePopup('hobbyPopup')">Close</button>
+  <div class="popup" id="popup2">
+    <div class="popup-box">
+      <h3>Western Dance</h3>
+      <p>Professionally trained in Western dance, I love performing and choreographing pieces for events and competitions.</p>
+      <button onclick="closePopup('popup2')">Close</button>
+    </div>
   </div>
-</div>
-
-<div class="popup" id="dancePopup">
-  <div class="popup-content">
-    <h3>Western Dance</h3>
-    <p>Professionally trained Western dancer. I perform regularly at cultural fests and choreograph both solo and group pieces.</p>
-    <button class="close-btn" onclick="closePopup('dancePopup')">Close</button>
+  <div class="popup" id="popup3">
+    <div class="popup-box">
+      <h3>Public Speaking & MC</h3>
+      <p>I host events as an MC and enjoy engaging people with my voice and presence at both formal and informal gatherings.</p>
+      <button onclick="closePopup('popup3')">Close</button>
+    </div>
   </div>
-</div>
-
-<div class="popup" id="mcPopup">
-  <div class="popup-content">
-    <h3>Anchoring & Public Speaking</h3>
-    <p>Experienced in Mceeing and anchoring both formal and informal events. Passionate about engaging audiences and leading conversations.</p>
-    <button class="close-btn" onclick="closePopup('mcPopup')">Close</button>
+  <div class="popup" id="popup4">
+    <div class="popup-box">
+      <h3>Influencer & YouTube</h3>
+      <p>I run two YouTube channels — one for Engineering Math, another for Dance + Travel Vlogs. I’m also active on Instagram with creative posts and reels.</p>
+      <button onclick="closePopup('popup4')">Close</button>
+    </div>
   </div>
-</div>
-
-<div class="popup" id="mediaPopup">
-  <div class="popup-content">
-    <h3>Instagram Influencer & YouTube Creator</h3>
-    <p>I manage two YouTube channels — one dedicated to Engineering Mathematics tutorials and another for Dance + Travel vlogs. Also active on Instagram sharing lifestyle, nature, and creative reels.</p>
-    <button class="close-btn" onclick="closePopup('mediaPopup')">Close</button>
+  <div class="popup" id="popup5">
+    <div class="popup-box">
+      <h3>Video Editing & Voice-over</h3>
+      <p>I edit my own content using pro tools and lend voiceovers for videos and events — one of my favorite creative outlets.</p>
+      <button onclick="closePopup('popup5')">Close</button>
+    </div>
   </div>
-</div>
 
-<div class="popup" id="editPopup">
-  <div class="popup-content">
-    <h3>Video Editing & Voice-Over</h3>
-    <p>Very passionate about video editing and giving voiceovers for MC events, videos, and short content. I use professional tools to create high-quality digital content.</p>
-    <button class="close-btn" onclick="closePopup('editPopup')">Close</button>
-  </div>
-</div>
-
-<script>
-  function openPopup(id) {
-    document.getElementById(id).style.display = "flex";
-  }
-  function closePopup(id) {
-    document.getElementById(id).style.display = "none";
-  }
-</script>
-
+  <script>
+    function openPopup(id) {
+      document.getElementById(id).classList.add('show');
+    }
+    function closePopup(id) {
+      document.getElementById(id).classList.remove('show');
+    }
+  </script>
 </body>
 </html>
