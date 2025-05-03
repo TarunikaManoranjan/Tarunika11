@@ -433,3 +433,7 @@ body {
   border: 3px solid #ccc;
   margin-bottom: 10px;
 }
+.header {
+  text-align: center;
+  padding: 20px;
+}
