@@ -206,164 +206,6 @@
 
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tarunika Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-
-    header {
-      text-align: center;
-      padding: 30px 20px;
-      background-color: rgba(0, 0, 0, 0.6);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    header p {
-      margin-top: 5px;
-      font-size: 1.2em;
-      color: #ddd;
-    }
-
-    .menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 80vh;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-
-    .menu a {
-      width: 70%;
-      max-width: 600px;
-      padding: 20px;
-      margin: 15px 0;
-      background-color: rgba(255, 255, 255, 0.15);
-      text-align: center;
-      text-decoration: none;
-      color: white;
-      font-size: 1.5em;
-      border-radius: 15px;
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      transition: 0.3s;
-      cursor: pointer;
-    }
-
-    .menu a:hover {
-      background-color: rgba(255, 255, 255, 0.25);
-      transform: scale(1.05);
-    }
-
-    .menu a img {
-      height: 30px;
-      width: 30px;
-    }
-
-    /* Popup Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.6);
-    }
-
-    .modal-content {
-      background-color: white;
-      color: #333;
-      margin: 5% auto;
-      padding: 25px 30px;
-      border-radius: 15px;
-      max-width: 700px;
-      position: relative;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 24px;
-      color: #555;
-      cursor: pointer;
-    }
-
-    .close-btn:hover {
-      color: #000;
-    }
-
-    .section-box {
-      border: 2px solid #4682b4;
-      padding: 15px;
-      margin: 15px 0;
-      border-radius: 10px;
-      background-color: #f0f8ff;
-    }
-
-    .section-box h3 {
-      margin-top: 0;
-      color: #2a4e6c;
-    }
-
-    .hobby-btn {
-      display: inline-block;
-      margin: 8px;
-      padding: 10px 15px;
-      background-color: #4682b4;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .hobby-btn:hover {
-      background-color: #5a9bd3;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Tarunika Manoranjan</h1>
-  <p>2nd Year Biomedical Engineering Student | Enthusiastic Learner | Nature Lover</p>
-</header>
-
-<div class="menu">
-  <a onclick="showModal('educationModal')"><img src="https://img.icons8.com/ios-filled/50/ffffff/graduation-cap.png">Education</a>
-  <a onclick="showModal('hobbiesModal')"><img src="https://img.icons8.com/ios-filled/50/ffffff/music.png">Hobbies</a>
-  <a onclick="showModal('skillsModal')"><img src="https://img.icons8.com/ios-filled/50/ffffff/settings.png">Skills</a>
-  <a onclick="showModal('achievementsModal')"><img src="https://img.icons8.com/ios-filled/50/ffffff/trophy.png">Achievements</a>
-</div>
-
 <!-- Education Modal -->
 <div id="educationModal" class="modal">
   <div class="modal-content">
@@ -374,62 +216,19 @@
       <h3>Schooling</h3>
       <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
       <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
-      <p><strong>10th:</strong> 94% | <strong>12th:</strong> 86.3%</p>
+      <p><strong>10th Grade:</strong> 94%</p>
+      <p><strong>12th Grade:</strong> 86.3%</p>
     </div>
 
     <div class="section-box">
       <h3>College</h3>
-      <p><strong>Institute:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
-      <p><strong>CGPA:</strong> Sem 3 - 9.79, Sem 2 - 9.04, Sem 1 - 9.39</p>
+      <p><strong>Institution:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
+      <p><strong>CGPA:</strong> Sem 1: 9.39 | Sem 2: 9.04 | Sem 3: 9.79</p>
     </div>
   </div>
 </div>
 
-<!-- Hobbies Modal -->
-<div id="hobbiesModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('hobbiesModal')">&times;</span>
-    <h2>Hobbies & Passions</h2>
-    <div class="section-box">
-      <h3>Click to Explore</h3>
-      <button class="hobby-btn" onclick="alert('Dance keeps me energized and expressive!')">Western Dance</button>
-      <button class="hobby-btn" onclick="alert('I love drawing and painting in my free time.')">Fine Arts</button>
-      <button class="hobby-btn" onclick="alert('Trained in classical keyboard – music soothes me.')">Classical Keyboard</button>
-      <button class="hobby-btn" onclick="alert('I’ve hosted multiple college events and public fests.')">MC & Public Speaking</button>
-      <button class="hobby-btn" onclick="alert('Editing reels and doing voiceovers is my jam.')">Video Editing</button>
-      <button class="hobby-btn" onclick="alert('Sharing positivity and productivity tips on Instagram.')">Instagram Influencer</button>
-      <button class="hobby-btn" onclick="alert('Educational videos on Engineering Mathematics.')">YouTube: Math</button>
-      <button class="hobby-btn" onclick="alert('Travel and dance vlogs on my channel.')">YouTube: Vlogs</button>
-    </div>
-  </div>
-</div>
-
-<!-- Skills Modal -->
-<div id="skillsModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('skillsModal')">&times;</span>
-    <h2>Skills</h2>
-    <div class="section-box">
-      <ul>
-        <li><strong>PowerPoint:</strong> Engaging presentations</li>
-        <li><strong>Canva:</strong> Creative social media visuals</li>
-        <li><strong>InShot:</strong> Video editing for reels and stories</li>
-        <li><strong>KiCad:</strong> PCB and schematic design</li>
-        <li><strong>AutoCAD:</strong> Biomedical and mechanical drawings</li>
-        <li><strong>EasyEDA:</strong> Circuit simulation & embedded systems</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Achievements Modal -->
-<div id="achievementsModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('achievementsModal')">&times;</span>
-    <h2>Achievements</h2>
-    <div class="section-box">
-      <ul>
-        <li>🏆 First place in Dance Competition by Youth United Council</li>
-        <li>🎤 MCeed Youth United Fest India at Patrician College in front of Tamilisai</li>
-        <li>🎙️ Hosted event at Jawaharlal Neh
+     
+ 
+   
 
