@@ -97,3 +97,112 @@
   <div id="yt2" class="popup"><div class="popup-box"><h3>Dance & Travel Vlogs Channel</h3><p>Blending dance moves with beautiful travel spots to create visual stories.</p><button onclick="closePopup('yt2')">Close</button></div></div>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Sections</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .menu {
+      width: 60%;
+      margin: 50px auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .menu-item {
+      padding: 20px;
+      margin: 10px 0;
+      background-color: rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      text-align: left;
+      font-size: 1.5rem;
+      transition: background 0.3s, transform 0.2s;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-item:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: scale(1.03);
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .detail {
+      display: none;
+      padding: 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      margin: 0 0 20px 0;
+      border-left: 5px solid #90ee90;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <div class="menu-item" onclick="toggleDetail('education')">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/graduation-cap.png" class="icon"> Educational Background
+    </div>
+    <div id="education" class="detail">Details about academic qualifications, institutions attended, and key milestones.</div>
+
+    <div class="menu-item" onclick="toggleDetail('hobbies')">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/paint-palette.png" class="icon"> My Hobbies
+    </div>
+    <div id="hobbies" class="detail">Passions and interests such as dance, art, music, and content creation.</div>
+
+    <div class="menu-item" onclick="toggleDetail('skills')">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/settings.png" class="icon"> Skills
+    </div>
+    <div id="skills" class="detail">Technical tools and creative skills including PowerPoint, Canva, AutoCAD, and video editing.</div>
+
+    <div class="menu-item" onclick="toggleDetail('achievements')">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/trophy.png" class="icon"> Achievements
+    </div>
+    <div id="achievements" class="detail">Notable accomplishments like awards, competitions won, and events hosted.</div>
+
+    <div class="menu-item" onclick="toggleDetail('projects')">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/idea.png" class="icon"> Projects
+    </div>
+    <div id="projects" class="detail">Mini projects and academic works completed with outcomes and learning highlights.</div>
+
+    <div class="menu-item" onclick="toggleDetail('certifications')">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/certificate.png" class="icon"> Certifications
+    </div>
+    <div id="certifications" class="detail">Professional certifications and completed online/offline courses.</div>
+  </div>
+
+  <script>
+    function toggleDetail(id) {
+      const section = document.getElementById(id);
+      if (section.style.display === 'block') {
+        section.style.display = 'none';
+      } else {
+        document.querySelectorAll('.detail').forEach(el => el.style.display = 'none');
+        section.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
