@@ -2,167 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tarunika Manoranjan - Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f8ff;
-      color: #333;
-    }
-    .header {
-      background-color: #4682b4;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .navbar {
-      overflow: hidden;
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .navbar a {
-      padding: 14px 20px;
-      display: block;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    .navbar a:hover {
-      background-color: #575757;
-    }
-    .container {
-      padding: 20px;
-    }
-    .card {
-      background-color: white;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      max-width: 900px;
-    }
-    .buttons button {
-      margin: 5px;
-      padding: 12px 20px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #4682b4;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .buttons button:hover {
-      background-color: #5a9bd3;
-    }
-    .popup {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.6);
-    }
-    .popup-box {
-      background: white;
-      margin: 10% auto;
-      padding: 20px;
-      border-radius: 15px;
-      width: 80%;
-      max-width: 600px;
-    }
-    .achievements-list li {
-      margin-bottom: 10px;
-    }
-  </style>
-</head>
-<body>
-<div class="header">
-  <h1>Tarunika Manoranjan</h1>
-  <p>2nd Year Biomedical Engineering Student | Enthusiastic Learner | Nature Lover</p>
-</div>
-<div class="navbar">
-  <a href="#education">Education</a>
-  <a href="#hobbies">Hobbies</a>
-  <a href="#skills">Skills</a>
-  <a href="#achievements">Achievements</a>
-</div>
-<div class="container">
-  <div id="education" class="card">
-    <h2>Education Background</h2>
-    <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
-    <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
-    <p><strong>College:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
-    <p><strong>CGPA:</strong> Sem 3 - 9.79, Sem 2 - 9.04, Sem 1 - 9.39</p>
-    <p><strong>12th:</strong> 86.3% | <strong>10th:</strong> 94%</p>
-  </div>
-
-  <div id="hobbies" class="card">
-    <h2>My Hobbies & Passions</h2>
-    <div class="buttons">
-      <button onclick="showPopup('dancer')">Western Dance</button>
-      <button onclick="showPopup('arts')">Fine Arts</button>
-      <button onclick="showPopup('keyboard')">Classical Keyboard</button>
-      <button onclick="showPopup('mc')">MC & Public Speaking</button>
-      <button onclick="showPopup('editing')">Video Editing & Voice Over</button>
-      <button onclick="showPopup('influencer')">Instagram Influencer</button>
-      <button onclick="showPopup('yt1')">YouTube: Engineering Mathematics</button>
-      <button onclick="showPopup('yt2')">YouTube: Dance & Travel Vlogs</button>
-    </div>
-  </div>
-
-  <div id="skills" class="card">
-    <h2>Skills</h2>
-    <p>Tools & Expertise I Have Gained</p>
-    <ul>
-      <li><strong>PowerPoint:</strong> Engaging presentations with clarity and appeal.</li>
-      <li><strong>Canva:</strong> Stunning visuals for social media and design projects.</li>
-      <li><strong>InShot:</strong> Professional video editing for social media content.</li>
-      <li><strong>KiCad:</strong> PCB and schematic design for electronics.</li>
-      <li><strong>AutoCAD:</strong> 2D & 3D biomedical and mechanical drawings.</li>
-      <li><strong>EasyEDA:</strong> Circuit simulation and embedded system design.</li>
-    </ul>
-  </div>
-
-  <div id="achievements" class="card">
-    <h2>Achievements</h2>
-    <ul class="achievements-list">
-      <li>🏆 First place in Dance Competition held by Youth United Council.</li>
-      <li>🎤 MCeed Youth United Fest India at Patrician College of Arts and Science in front of Tamilisai.</li>
-      <li>🎙️ MCeed an event at Jawaharlal Nehru Stadium for Karma Yogi Trust.</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Popups -->
-<script>
-  function showPopup(id) {
-    document.getElementById(id).style.display = 'block';
-  }
-  function closePopup(id) {
-    document.getElementById(id).style.display = 'none';
-  }
-</script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Tarunika Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
   <style>
     body {
       margin: 0;
@@ -199,6 +40,7 @@
       justify-content: center;
       gap: 15px;
       transition: 0.3s;
+      cursor: pointer;
     }
 
     .menu a:hover {
@@ -210,16 +52,115 @@
       height: 30px;
       width: 30px;
     }
+
+    .content {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #333;
+      padding: 30px;
+      margin: 40px auto;
+      border-radius: 15px;
+      max-width: 900px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .content h2 {
+      margin-top: 0;
+    }
+
+    .achievements-list li {
+      margin-bottom: 10px;
+    }
+
+    .close-btn {
+      background-color: #4682b4;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      float: right;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background-color: #5a9bd3;
+    }
   </style>
 </head>
 <body>
-  <div class="menu">
-    <a href="education.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/graduation-cap.png" alt="Education">Education</a>
-    <a href="hobbies.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/music.png" alt="Hobbies">Hobbies</a>
-    <a href="skills.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/settings.png" alt="Skills">Skills</a>
-    <a href="achievements.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/trophy.png" alt="Achievements">Achievements</a>
-    <a href="certificates.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/certificate.png" alt="Certificates">Certificates</a>
-    <a href="projects.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/project.png" alt="Projects">Projects</a>
-  </div>
+
+<!-- Menu -->
+<div class="menu">
+  <a onclick="showSection('education')"><img src="https://img.icons8.com/ios-filled/50/ffffff/graduation-cap.png" alt="Education">Education</a>
+  <a onclick="showSection('hobbies')"><img src="https://img.icons8.com/ios-filled/50/ffffff/music.png" alt="Hobbies">Hobbies</a>
+  <a onclick="showSection('skills')"><img src="https://img.icons8.com/ios-filled/50/ffffff/settings.png" alt="Skills">Skills</a>
+  <a onclick="showSection('achievements')"><img src="https://img.icons8.com/ios-filled/50/ffffff/trophy.png" alt="Achievements">Achievements</a>
+</div>
+
+<!-- Content Sections (Hidden initially) -->
+<div id="education" class="content">
+  <button class="close-btn" onclick="closeSection('education')">Close</button>
+  <h2>Education Background</h2>
+  <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
+  <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
+  <p><strong>College:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
+  <p><strong>CGPA:</strong> Sem 3 - 9.79, Sem 2 - 9.04, Sem 1 - 9.39</p>
+  <p><strong>12th:</strong> 86.3% | <strong>10th:</strong> 94%</p>
+</div>
+
+<div id="hobbies" class="content">
+  <button class="close-btn" onclick="closeSection('hobbies')">Close</button>
+  <h2>My Hobbies & Passions</h2>
+  <ul>
+    <li>Western Dance</li>
+    <li>Fine Arts</li>
+    <li>Classical Keyboard</li>
+    <li>MC & Public Speaking</li>
+    <li>Video Editing & Voice Over</li>
+    <li>Instagram Influencer</li>
+    <li>YouTube: Engineering Mathematics</li>
+    <li>YouTube: Dance & Travel Vlogs</li>
+  </ul>
+</div>
+
+<div id="skills" class="content">
+  <button class="close-btn" onclick="closeSection('skills')">Close</button>
+  <h2>Skills</h2>
+  <ul>
+    <li><strong>PowerPoint:</strong> Engaging presentations with clarity and appeal.</li>
+    <li><strong>Canva:</strong> Stunning visuals for social media and design projects.</li>
+    <li><strong>InShot:</strong> Professional video editing for social media content.</li>
+    <li><strong>KiCad:</strong> PCB and schematic design for electronics.</li>
+    <li><strong>AutoCAD:</strong> 2D & 3D biomedical and mechanical drawings.</li>
+    <li><strong>EasyEDA:</strong> Circuit simulation and embedded system design.</li>
+  </ul>
+</div>
+
+<div id="achievements" class="content">
+  <button class="close-btn" onclick="closeSection('achievements')">Close</button>
+  <h2>Achievements</h2>
+  <ul class="achievements-list">
+    <li>🏆 First place in Dance Competition held by Youth United Council.</li>
+    <li>🎤 MCeed Youth United Fest India at Patrician College of Arts and Science in front of Tamilisai.</li>
+    <li>🎙️ MCeed an event at Jawaharlal Nehru Stadium for Karma Yogi Trust.</li>
+  </ul>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.content').forEach(section => {
+      section.style.display = 'none';
+    });
+    document.getElementById(id).style.display = 'block';
+    window.scrollTo(0, 0);
+  }
+
+  function closeSection(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
+
