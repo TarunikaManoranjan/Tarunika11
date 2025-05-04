@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tarunika Portfolio</title>
   <style>
     body {
@@ -14,20 +14,15 @@
     }
 
     header {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       padding: 30px 20px;
       background-color: rgba(0, 0, 0, 0.6);
       position: sticky;
       top: 0;
       z-index: 10;
-    }
-
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
     }
 
     .profile-img {
@@ -37,6 +32,7 @@
       object-fit: cover;
       border: 3px solid white;
       box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      margin-right: 20px;
     }
 
     .text-content h1 {
@@ -84,12 +80,6 @@
       transform: scale(1.05);
     }
 
-    .menu a img {
-      height: 30px;
-      width: 30px;
-    }
-
-    /* Popup Modal */
     .modal {
       display: none;
       position: fixed;
@@ -105,10 +95,10 @@
     .modal-content {
       background-color: white;
       color: #333;
-      margin: 10% auto;
+      margin: 5% auto;
       padding: 20px 30px;
       border-radius: 15px;
-      max-width: 700px;
+      max-width: 800px;
       position: relative;
     }
 
@@ -133,90 +123,163 @@
 <body>
 
 <header>
-  <div class="header-content">
-    <img src="Images/WhatsApp Image 2025-05-03 at 3.08.18 PM.jpeg" alt="Profile Photo" class="profile-img">
-    <div class="text-content">
-      <h1>Tarunika Manoranjan</h1>
-      <p>2nd Year Biomedical Engineering Student | Enthusiastic Learner | Nature Lover</p>
-    </div>
+  <img src="Images/WhatsApp Image 2025-05-03 at 3.08.18 PM.jpeg" alt="Profile Photo" class="profile-img">
+  <div class="text-content">
+    <h1>Tarunika Manoranjan</h1>
+    <p>2nd Year Biomedical Engineering Student | Enthusiastic Learner | Nature Lover</p>
   </div>
 </header>
 
 <div class="menu">
-  <a onclick="showModal('educationModal')"><img src="https://img.icons8.com/ios-filled/50/ffffff/graduation-cap.png">Education</a>
-  <a onclick="showModal('hobbiesModal')"><img src="https://img.icons8.com/ios-filled/50/ffffff/music.png">Hobbies</a>
-  <a onclick="showModal('skillsModal')"><img src="https://img.icons8.com/ios-filled/50/ffffff/settings.png">Skills</a>
-  <a onclick="showModal('achievementsModal')"><img src="https://img.icons8.com/ios-filled/50/ffffff/trophy.png">Achievements</a>
+  <a onclick="showModal('educationModal')">Education</a>
+  <a onclick="showModal('projectsModal')">Projects</a>
+  <a onclick="showModal('seminarModal')">Seminar</a>
+  <a onclick="showModal('workshopsModal')">Workshops</a>
+  <a onclick="showModal('certCurricularModal')">Certifications - Curricular</a>
+  <a onclick="showModal('certCoCurricularModal')">Certifications - Co Curricular</a>
+  <a onclick="showModal('stageModal')">Stage Performances / Theatre</a>
+  <a onclick="showModal('skillsModal')">Skills</a>
+  <a onclick="showModal('hobbiesModal')">Hobbies</a>
+  <a onclick="showModal('achievementsModal')">Achievements</a>
+  <a onclick="showModal('bioModal')">Bioinstrumentation & AI</a>
 </div>
 
-<!-- Education Modal -->
+<!-- Modals -->
+
 <div id="educationModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal('educationModal')">&times;</span>
-    <h2>Education</h2>
-    <div class="section-box">
-      <h3>Schooling</h3>
-      <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
-      <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
-      <p><strong>10th Grade:</strong> 94%</p>
-      <p><strong>12th Grade:</strong> 86.3%</p>
-    </div>
-    <div class="section-box">
-      <h3>College</h3>
-      <p><strong>Institution:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
-      <p><strong>CGPA:</strong> Sem 1: 9.39 | Sem 2: 9.04 | Sem 3: 9.79</p>
-    </div>
+    <h2>Education Background</h2>
+    <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
+    <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
+    <p><strong>College:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
+    <p><strong>CGPA:</strong> Sem 1 - 9.39 | Sem 2 - 9.04 | Sem 3 - 9.79</p>
+    <p><strong>10th:</strong> 94% | <strong>12th:</strong> 86.3%</p>
   </div>
 </div>
 
-<!-- Hobbies Modal -->
-<div id="hobbiesModal" class="modal">
+<div id="projectsModal" class="modal">
   <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('hobbiesModal')">&times;</span>
-    <h2>My Hobbies & Passions</h2>
+    <span class="close-btn" onclick="closeModal('projectsModal')">&times;</span>
+    <h2>Projects</h2>
     <ul>
-      <li>Western Dance</li>
-      <li>Fine Arts</li>
-      <li>Classical Keyboard</li>
-      <li>MC & Public Speaking</li>
-      <li>Video Editing & Voice Over</li>
-      <li>Instagram Influencer</li>
-      <li>YouTube: Engineering Mathematics</li>
-      <li>YouTube: Dance & Travel Vlogs</li>
+      <li>Wein Bridge Oscillator Circuit - Simulated in EasyEDA, converted into PCB and fabricated.</li>
+      <li>Monostable Multivibrator using NE555 Timer - Timing and pulse generation project.</li>
+      <li>Temperature Monitoring System using Arduino & DS18B20 Sensor.</li>
+      <li>Scleral Buckling - Physical model representation.</li>
+      <li>Blood Flow inside Nephron - Demonstrated using syringes, air pressure and water.</li>
     </ul>
   </div>
 </div>
 
-<!-- Skills Modal -->
+<div id="seminarModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('seminarModal')">&times;</span>
+    <h2>Seminars</h2>
+    <ul>
+      <li>Stress-Strain Graph - Understanding material deformation.</li>
+      <li>Tissue Dynamics: Tissue Homeostasis - Maintaining balance in biological tissues.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="workshopsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('workshopsModal')">&times;</span>
+    <h2>Workshops</h2>
+    <h3>Curricular</h3>
+    <ul>
+      <li>Workshop on Writing Research Papers - SRM University</li>
+      <li>Hands-on PCB Workshop - SRM University (ECE Department)</li>
+    </ul>
+    <h3>Co-Curricular</h3>
+    <ul>
+      <li>Dance Workshops by Anu Viswa, Sonali Bhadauria, and Akansha Sharma</li>
+      <li>Former Trainee & Teacher at Prasanna Dance Studio - Earned Crew Member Title</li>
+      <li>Currently part of Raack Studios Dance Academy</li>
+    </ul>
+  </div>
+</div>
+
+<div id="certCurricularModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('certCurricularModal')">&times;</span>
+    <h2>Curricular Certifications</h2>
+    <p>Certifications in PCB Design, Research Methodology, and Biomedical Instrumentation Tools.</p>
+  </div>
+</div>
+
+<div id="certCoCurricularModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('certCoCurricularModal')">&times;</span>
+    <h2>Co-Curricular Certifications</h2>
+    <p>Certificates in dance training, public speaking, and creative arts from various academies and events.</p>
+  </div>
+</div>
+
+<div id="stageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('stageModal')">&times;</span>
+    <h2>Stage Performances / Theatre</h2>
+    <ul>
+      <li>MC for events at Jawaharlal Nehru Stadium and Patrician College Fest.</li>
+      <li>Stage performer at various college cultural programs and public platforms.</li>
+    </ul>
+  </div>
+</div>
+
 <div id="skillsModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal('skillsModal')">&times;</span>
     <h2>Skills</h2>
     <ul>
-      <li><strong>PowerPoint:</strong> Engaging presentations with clarity and appeal.</li>
-      <li><strong>Canva:</strong> Stunning visuals for social media and design projects.</li>
-      <li><strong>InShot:</strong> Professional video editing for social media content.</li>
-      <li><strong>KiCad:</strong> PCB and schematic design for electronics.</li>
-      <li><strong>AutoCAD:</strong> 2D & 3D biomedical and mechanical drawings.</li>
-      <li><strong>EasyEDA:</strong> Circuit simulation and embedded system design.</li>
+      <li><strong>PowerPoint:</strong> Clarity-driven and visual presentations.</li>
+      <li><strong>Canva:</strong> Social media design and flyers.</li>
+      <li><strong>InShot:</strong> Professional video editing.</li>
+      <li><strong>KiCad & EasyEDA:</strong> PCB & circuit design.</li>
+      <li><strong>AutoCAD:</strong> Biomedical drawings and designs.</li>
     </ul>
   </div>
 </div>
 
-<!-- Achievements Modal -->
+<div id="hobbiesModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('hobbiesModal')">&times;</span>
+    <h2>Hobbies & Interests</h2>
+    <ul>
+      <li>Western Dance</li>
+      <li>Fine Arts</li>
+      <li>Public Speaking</li>
+      <li>YouTube - Math & Dance Content</li>
+      <li>Instagram Creator & Influencer</li>
+    </ul>
+  </div>
+</div>
+
 <div id="achievementsModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal('achievementsModal')">&times;</span>
     <h2>Achievements</h2>
     <ul>
-      <li>🏆 First place in Dance Competition held by Youth United Council.</li>
-      <li>🎤 MCeed Youth United Fest India at Patrician College of Arts and Science in front of Tamilisai.</li>
-      <li>🎙️ MCeed an event at Jawaharlal Nehru Stadium for Karma Yogi Trust.</li>
+      <li>🏆 1st Place - Youth United Council Dance Competition</li>
+      <li>🎤 MC - Patrician College Fest in presence of Tamilisai</li>
+      <li>🎙️ Host - Karma Yogi Trust event at JN Stadium</li>
     </ul>
   </div>
 </div>
 
-<!-- JavaScript for Modal -->
+<div id="bioModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('bioModal')">&times;</span>
+    <h2>Bioinstrumentation & Artificial Intelligence</h2>
+    <p>
+      As a biomedical engineering student, I am deeply passionate about bioinstrumentation—the interface of biology and devices.
+      With a foundation in electronics and biomedical systems, I explore real-time diagnostics, monitoring systems, and innovative health solutions.
+      I am also intrigued by how AI is transforming diagnostics, predictive healthcare, and biomedical research.
+    </p>
+  </div>
+</div>
+
 <script>
   function showModal(id) {
     document.getElementById(id).style.display = "block";
