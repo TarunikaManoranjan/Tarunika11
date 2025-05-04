@@ -22,12 +22,29 @@
       z-index: 10;
     }
 
-    header h1 {
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    }
+
+    .text-content h1 {
       margin: 0;
       font-size: 2.5em;
     }
 
-    header p {
+    .text-content p {
       margin-top: 5px;
       font-size: 1.2em;
       color: #ddd;
@@ -116,8 +133,13 @@
 <body>
 
 <header>
-  <h1>Tarunika Manoranjan</h1>
-  <p>2nd Year Biomedical Engineering Student | Enthusiastic Learner | Nature Lover</p>
+  <div class="header-content">
+    <img src="Images/WhatsApp Image 2025-05-03 at 3.08.18 PM.jpeg" alt="Profile Photo" class="profile-img">
+    <div class="text-content">
+      <h1>Tarunika Manoranjan</h1>
+      <p>2nd Year Biomedical Engineering Student | Enthusiastic Learner | Nature Lover</p>
+    </div>
+  </div>
 </header>
 
 <div class="menu">
@@ -127,66 +149,27 @@
   <a onclick="showModal('achievementsModal')"><img src="https://img.icons8.com/ios-filled/50/ffffff/trophy.png">Achievements</a>
 </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarunika Portfolio</title>
-  <style>
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      padding: 30px 20px;
-      color: white;
-    }
-
-    .profile-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-      margin-bottom: 15px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-    }
-
-    header p {
-      margin-top: 8px;
-      font-size: 1.1em;
-      color: #ddd;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <img src="Images/WhatsApp Image 2025-05-03 at 3.08.18 PM.jpeg" alt="Profile Photo" class="profile-img">
-    <h1>Tarunika Manoranjan</h1>
-    <p>2nd Year Biomedical Engineering Student | Enthusiastic Learner | Nature Lover</p>
-  </header>
-
-</body>
-</html>
-
-<!-- Modals -->
+<!-- Education Modal -->
 <div id="educationModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal('educationModal')">&times;</span>
-    <h2>Education Background</h2>
-    <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
-    <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
-    <p><strong>College:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
-    <p><strong>CGPA:</strong> Sem 3 - 9.79, Sem 2 - 9.04, Sem 1 - 9.39</p>
-    <p><strong>12th:</strong> 86.3% | <strong>10th:</strong> 94%</p>
+    <h2>Education</h2>
+    <div class="section-box">
+      <h3>Schooling</h3>
+      <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
+      <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
+      <p><strong>10th Grade:</strong> 94%</p>
+      <p><strong>12th Grade:</strong> 86.3%</p>
+    </div>
+    <div class="section-box">
+      <h3>College</h3>
+      <p><strong>Institution:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
+      <p><strong>CGPA:</strong> Sem 1: 9.39 | Sem 2: 9.04 | Sem 3: 9.79</p>
+    </div>
   </div>
 </div>
 
+<!-- Hobbies Modal -->
 <div id="hobbiesModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal('hobbiesModal')">&times;</span>
@@ -204,6 +187,7 @@
   </div>
 </div>
 
+<!-- Skills Modal -->
 <div id="skillsModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal('skillsModal')">&times;</span>
@@ -219,6 +203,7 @@
   </div>
 </div>
 
+<!-- Achievements Modal -->
 <div id="achievementsModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal('achievementsModal')">&times;</span>
@@ -241,7 +226,6 @@
     document.getElementById(id).style.display = "none";
   }
 
-  // Close modal when clicking outside the content
   window.onclick = function(event) {
     document.querySelectorAll('.modal').forEach(modal => {
       if (event.target === modal) {
@@ -253,36 +237,7 @@
 
 </body>
 </html>
-<!-- Education Modal -->
-<div id="educationModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('educationModal')">&times;</span>
-    <h2>Education</h2>
 
-    <div class="section-box">
-      <h3>Schooling</h3>
-      <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
-      <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
-      <p><strong>10th Grade:</strong> 94%</p>
-      <p><strong>12th Grade:</strong> 86.3%</p>
-    </div>
-
-    <div class="section-box">
-      <h3>College</h3>
-      <p><strong>Institution:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
-      <p><strong>CGPA:</strong> Sem 1: 9.39 | Sem 2: 9.04 | Sem 3: 9.79</p>
-    </div>
-  </div>
-</div>
-<header>
-  <div class="header-content">
-    <img src="Images/WhatsApp Image 2025-05-03 at 3.08.18 PM.jpeg" alt="Profile Photo" class="profile-img">
-    <div class="text-content">
-      <h1>Tarunika Manoranjan</h1>
-      <p>2nd Year Biomedical Engineering Student | Enthusiastic Learner | Nature Lover</p>
-    </div>
-  </div>
-</header>
 
      
  
