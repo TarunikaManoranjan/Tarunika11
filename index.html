@@ -155,4 +155,71 @@
 </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarunika Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
 
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .menu a {
+      width: 70%;
+      max-width: 600px;
+      padding: 20px;
+      margin: 15px 0;
+      background-color: rgba(255, 255, 255, 0.15);
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 1.5em;
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+
+    .menu a img {
+      height: 30px;
+      width: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <a href="education.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/graduation-cap.png" alt="Education">Education</a>
+    <a href="hobbies.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/music.png" alt="Hobbies">Hobbies</a>
+    <a href="skills.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/settings.png" alt="Skills">Skills</a>
+    <a href="achievements.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/trophy.png" alt="Achievements">Achievements</a>
+    <a href="certificates.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/certificate.png" alt="Certificates">Certificates</a>
+    <a href="projects.html"><img src="https://img.icons8.com/ios-filled/50/ffffff/project.png" alt="Projects">Projects</a>
+  </div>
+</body>
+</html>
