@@ -88,89 +88,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Passions & Hobbies</title>
+  <title>My Creative Passions</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
       margin: 0;
       padding: 0;
     }
-    header {
-      background: #333;
+
+    h1 {
+      background-color: #1f3c88;
       color: white;
-      padding: 20px;
+      padding: 30px;
+      margin: 0;
       text-align: center;
     }
-    .container {
-      padding: 30px;
+
+    .buttons {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
+      padding: 40px 20px;
     }
-    .box {
-      background: white;
-      border-radius: 15px;
+
+    .buttons button {
+      background-color: #1f3c88;
+      color: #fff;
+      border: none;
+      padding: 18px 30px;
+      font-size: 18px;
+      border-radius: 12px;
+      cursor: pointer;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      width: 300px;
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease;
     }
-    .box:hover {
+
+    .buttons button:hover {
+      background-color: #2a5298;
       transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
-    .box h2 {
-      color: #333;
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      margin: 30px auto;
+      padding: 30px;
+      max-width: 800px;
+    }
+
+    .card h2 {
+      color: #1f3c88;
       margin-bottom: 10px;
     }
-    .box p {
-      color: #555;
-      line-height: 1.5;
+
+    .card p {
+      color: #444;
+      font-size: 16px;
     }
-    footer {
-      background: #333;
-      color: white;
+
+    .card ul {
+      padding-left: 20px;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .popup-box {
+      background-color: #fff;
+      width: 90%;
+      max-width: 600px;
+      margin: 80px auto;
+      border-radius: 20px;
+      padding: 40px;
       text-align: center;
-      padding: 10px;
-      margin-top: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      animation: slideDown 0.3s ease;
+    }
+
+    .popup-box h3 {
+      font-size: 28px;
+      color: #1f3c88;
+      margin-bottom: 15px;
+    }
+
+    .popup-box p {
+      font-size: 18px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .popup-box button {
+      margin-top: 25px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .popup-box button:hover {
+      background-color: #c0392b;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to My Web Portfolio</h1>
-    <p>Here are my passions and hobbies</p>
-  </header>
+  <h1>My Creative Passions</h1>
 
-  <div class="container">
-    <div class="box">
-      <h2>Web Development</h2>
-      <p>I love building responsive and interactive websites. Creating clean, functional user interfaces and learning new technologies like JavaScript, React, and CSS frameworks excites me.</p>
-    </div>
-
-    <div class="box">
-      <h2>Graphic Design</h2>
-      <p>Designing logos, posters, and digital art allows me to express creativity. I enjoy using tools like Adobe Illustrator and Canva to craft visual stories that communicate effectively.</p>
-    </div>
-
-    <div class="box">
-      <h2>Photography</h2>
-      <p>Capturing moments through the lens is a big passion. I focus on landscapes and urban scenes, editing them to bring out mood and detail. It's a blend of art and timing I truly enjoy.</p>
-    </div>
-
-    <div class="box">
-      <h2>Gaming</h2>
-      <p>Gaming helps me unwind and also inspires my interest in game development. I explore both story-rich RPGs and strategy-based games that challenge my thinking.</p>
-    </div>
+  <div class="buttons">
+    <button onclick="showPopup('dancer')">Western Dance</button>
+    <button onclick="showPopup('arts')">Fine Arts</button>
+    <button onclick="showPopup('keyboard')">Classical Keyboard</button>
+    <button onclick="showPopup('mc')">MC & Public Speaking</button>
+    <button onclick="showPopup('editing')">Video Editing & Voice Over</button>
+    <button onclick="showPopup('influencer')">Instagram Influencer</button>
+    <button onclick="showPopup('yt1')">YouTube: Engineering Mathematics</button>
+    <button onclick="showPopup('yt2')">YouTube: Dance & Travel Vlogs</button>
   </div>
 
-  <footer>
-    <p>© 2025 Your Name | Portfolio on GitHub</p>
-  </footer>
+  <div class="card">
+    <h2>Skills</h2>
+    <p><strong>Tools & Expertise I Have Gained</strong></p>
+    <ul>
+      <li><strong>PowerPoint:</strong> Engaging presentations with clarity and appeal.</li>
+      <li><strong>Canva:</strong> Stunning visuals for social media and design projects.</li>
+      <li><strong>InShot:</strong> Professional video editing for social media content.</li>
+      <li><strong>KiCad:</strong> PCB and schematic design for electronics.</li>
+      <li><strong>AutoCAD:</strong> 2D & 3D biomedical and mechanical drawings.</li>
+      <li><strong>EasyEDA:</strong> Circuit simulation and embedded system design.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Achievements</h2>
+    <ul>
+      <li>🏆 First place in Dance Competition held by Youth United Council.</li>
+      <li>🎤 Hosted Youth United Fest at Patrician College of Arts and Science in front of Tamilisai.</li>
+      <li>🎙️ Anchored an event at Jawaharlal Nehru Stadium for Karma Yogi Trust.</li>
+    </ul>
+  </div>
+
+  <!-- Popup Modals -->
+  <div id="dancer" class="popup"><div class="popup-box"><h3>Western Dance</h3><p>I have trained in professional western dance styles, creating dynamic performances with high energy and expressive choreography. My stage presence and rhythmic sense drive my love for dance.</p><button onclick="closePopup('dancer')">Close</button></div></div>
+
+  <div id="arts" class="popup"><div class="popup-box"><h3>Fine Arts</h3><p>I explore creativity through drawing, painting, and visual storytelling. My fine arts journey has helped me develop patience, attention to detail, and a deep appreciation for visual aesthetics.</p><button onclick="closePopup('arts')">Close</button></div></div>
+
+  <div id="keyboard" class="popup"><div class="popup-box"><h3>Classical Keyboard</h3><p>I am a certified classical keyboard artist (5th year), trained in Indian classical music and have performed in various events. It’s a disciplined yet soul-soothing passion.</p><button onclick="closePopup('keyboard')">Close</button></div></div>
+
+  <div id="mc" class="popup"><div class="popup-box"><h3>MC & Public Speaking</h3><p>I have hosted multiple events, from college fests to large-scale public functions. I enjoy commanding the stage, connecting with audiences, and maintaining event energy with confidence.</p><button onclick="closePopup('mc')">Close</button></div></div>
+
+  <div id="editing" class="popup"><div class="popup-box"><h3>Video Editing & Voice Over</h3><p>I craft engaging narratives through video and voice. Using tools like InShot and my voiceover skills, I bring life to stories and create smooth, professional-quality content.</p><button onclick="closePopup('editing')">Close</button></div></div>
+
+  <div id="influencer" class="popup"><div class="popup-box"><h3>Instagram Influencer</h3><p>I curate meaningful content related to lifestyle, art, and nature. My Instagram platform is a space where creativity meets community, allowing me to connect and inspire daily.</p><button onclick="closePopup('influencer')">Close</button></div></div>
+
+  <div id="yt1" class="popup"><div class="popup-box"><h3>YouTube: Engineering Mathematics</h3><p>I simplify tough engineering math concepts for students on my YouTube channel. Teaching through real examples and visuals makes complex topics accessible and relatable.</p><button onclick="closePopup('yt1')">Close</button></div></div>
+
+  <div id="yt2" class="popup"><div class="popup-box"><h3>YouTube: Dance & Travel Vlogs</h3><p>I combine dance with travel adventures to showcase cultural stories, scenic beauty, and personal expression. It’s a fun blend of movement, exploration, and cinematography.</p><button onclick="closePopup('yt2')">Close</button></div></div>
+
+  <script>
+    function showPopup(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function closePopup(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
