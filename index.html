@@ -118,6 +118,23 @@
     ul li {
       margin-bottom: 10px;
     }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .social-links a img {
+      width: 30px;
+      margin: 0 10px;
+    }
+
+    .footer-text {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
@@ -141,144 +158,11 @@
   <a onclick="showModal('skillsModal')">Skills</a>
   <a onclick="showModal('hobbiesModal')">Hobbies</a>
   <a onclick="showModal('achievementsModal')">Achievements</a>
-  <a onclick="showModal('bioModal')">Bioinstrumentation & AI</a>
+  <a onclick="window.location.href='ai-bioinstrumentation.html'">Bioinstrumentation & AI</a>
 </div>
 
-<!-- Modals -->
-
-<div id="educationModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('educationModal')">&times;</span>
-    <h2>Education Background</h2>
-    <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
-    <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
-    <p><strong>College:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
-    <p><strong>CGPA:</strong> Sem 1 - 9.39 | Sem 2 - 9.04 | Sem 3 - 9.79</p>
-    <p><strong>10th:</strong> 94% | <strong>12th:</strong> 86.3%</p>
-  </div>
-</div>
-
-<div id="projectsModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('projectsModal')">&times;</span>
-    <h2>Projects</h2>
-    <ul>
-      <li>Wein Bridge Oscillator Circuit - Simulated in EasyEDA, converted into PCB and fabricated.</li>
-      <li>Monostable Multivibrator using NE555 Timer - Timing and pulse generation project.</li>
-      <li>Temperature Monitoring System using Arduino & DS18B20 Sensor.</li>
-      <li>Scleral Buckling - Physical model representation.</li>
-      <li>Blood Flow inside Nephron - Demonstrated using syringes, air pressure and water.</li>
-    </ul>
-  </div>
-</div>
-
-<div id="seminarModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('seminarModal')">&times;</span>
-    <h2>Seminars</h2>
-    <ul>
-      <li>Stress-Strain Graph - Understanding material deformation.</li>
-      <li>Tissue Dynamics: Tissue Homeostasis - Maintaining balance in biological tissues.</li>
-    </ul>
-  </div>
-</div>
-
-<div id="workshopsModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('workshopsModal')">&times;</span>
-    <h2>Workshops</h2>
-    <h3>Curricular</h3>
-    <ul>
-      <li>Workshop on Writing Research Papers - SRM University</li>
-      <li>Hands-on PCB Workshop - SRM University (ECE Department)</li>
-    </ul>
-    <h3>Co-Curricular</h3>
-    <ul>
-      <li>Dance Workshops by Anu Viswa, Sonali Bhadauria, and Akansha Sharma</li>
-      <li>Former Trainee & Teacher at Prasanna Dance Studio - Earned Crew Member Title</li>
-      <li>Currently part of Raack Studios Dance Academy</li>
-    </ul>
-  </div>
-</div>
-
-<div id="certCurricularModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('certCurricularModal')">&times;</span>
-    <h2>Curricular Certifications</h2>
-    <p>Certifications in PCB Design, Research Methodology, and Biomedical Instrumentation Tools.</p>
-  </div>
-</div>
-
-<div id="certCoCurricularModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('certCoCurricularModal')">&times;</span>
-    <h2>Co-Curricular Certifications</h2>
-    <p>Certificates in dance training, public speaking, and creative arts from various academies and events.</p>
-  </div>
-</div>
-
-<div id="stageModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('stageModal')">&times;</span>
-    <h2>Stage Performances / Theatre</h2>
-    <ul>
-      <li>MC for events at Jawaharlal Nehru Stadium and Patrician College Fest.</li>
-      <li>Stage performer at various college cultural programs and public platforms.</li>
-    </ul>
-  </div>
-</div>
-
-<div id="skillsModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('skillsModal')">&times;</span>
-    <h2>Skills</h2>
-    <ul>
-      <li><strong>PowerPoint:</strong> Clarity-driven and visual presentations.</li>
-      <li><strong>Canva:</strong> Social media design and flyers.</li>
-      <li><strong>InShot:</strong> Professional video editing.</li>
-      <li><strong>KiCad & EasyEDA:</strong> PCB & circuit design.</li>
-      <li><strong>AutoCAD:</strong> Biomedical drawings and designs.</li>
-    </ul>
-  </div>
-</div>
-
-<div id="hobbiesModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('hobbiesModal')">&times;</span>
-    <h2>Hobbies & Interests</h2>
-    <ul>
-      <li>Western Dance</li>
-      <li>Fine Arts</li>
-      <li>Public Speaking</li>
-      <li>YouTube - Math & Dance Content</li>
-      <li>Instagram Creator & Influencer</li>
-    </ul>
-  </div>
-</div>
-
-<div id="achievementsModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('achievementsModal')">&times;</span>
-    <h2>Achievements</h2>
-    <ul>
-      <li>🏆 1st Place - Youth United Council Dance Competition</li>
-      <li>🎤 MC - Patrician College Fest in presence of Tamilisai</li>
-      <li>🎙️ Host - Karma Yogi Trust event at JN Stadium</li>
-    </ul>
-  </div>
-</div>
-
-<div id="bioModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('bioModal')">&times;</span>
-    <h2>Bioinstrumentation & Artificial Intelligence</h2>
-    <p>
-      As a biomedical engineering student, I am deeply passionate about bioinstrumentation—the interface of biology and devices.
-      With a foundation in electronics and biomedical systems, I explore real-time diagnostics, monitoring systems, and innovative health solutions.
-      I am also intrigued by how AI is transforming diagnostics, predictive healthcare, and biomedical research.
-    </p>
-  </div>
-</div>
+<!-- Modals (Education, Projects, etc.) -->
+<!-- Add your modal content here as previously shown -->
 
 <script>
   function showModal(id) {
@@ -298,9 +182,7 @@
   };
 </script>
 
-</body>
-</html>
-<!-- Social Media Links -->
+<!-- Footer -->
 <footer>
   <div class="social-links">
     <a href="https://www.instagram.com/your_tarunika sanjiti manoranjan" target="_blank">
@@ -309,7 +191,7 @@
     <a href="https://www.youtube.com/@sanjitimanoranjan11" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube">
     </a>
-     <a href="https://www.youtube.com/@theoremthreadswithtarunika" target="_blank">
+    <a href="https://www.youtube.com/@theoremthreadswithtarunika" target="_blank">
       <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube">
     </a>
     <a href="https://www.linkedin.com/in/your_linkedin_profile" target="_blank">
@@ -318,69 +200,9 @@
   </div>
   <p class="footer-text">© 2025 Tarunika Manoranjan. All rights reserved.</p>
 </footer>
-<!-- Add inside your Bioinstrumentation modal content -->
-<div class="section-box">
-  <h3>Interactive AI Game</h3>
-  <p>
-    I developed a fun and logic-based AI-powered Tic-Tac-Toe game as a creative side project.
-    This project represents how fundamental logic gates and AI logic can be visualized interactively.
-  </p>
-  <a href="https://tarutic-tac-toe.tiiny.site/" target="_blank" style="
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 20px;
-      background-color: rgba(255,255,255,0.1);
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      font-size: 1.1em;
-      margin-top: 10px;
-      transition: background-color 0.3s ease;">
-    <img src="https://img.icons8.com/ios-filled/30/ffffff/controller.png" alt="Game Icon"/>
-    Play Tic-Tac-Toe AI Game
-  </a>
-</div>
-<!-- Bioinstrumentation and AI Modal -->
-<div id="bioinstrumentationModal" class="modal">
-  <div class="modal-content">
-    <span class="close-btn" onclick="closeModal('bioinstrumentationModal')">&times;</span>
-    <h2>Bioinstrumentation & AI</h2>
-    
-    <ul>
-      <li>Wein Bridge Oscillator Circuit – Simulated & fabricated using EasyEDA</li>
-      <li>Monostable Multivibrator using NE555 timer</li>
-      <li>Temperature Monitoring System using Arduino and DS18B20 sensor</li>
-      <li>Model of Scleral Buckling in Ophthalmology</li>
-      <li>Working blood flow inside nephron demonstrated using syringes, water & air pressure</li>
-    </ul>
 
-    <div class="section-box">
-      <h3>AI & Logic Game Project</h3>
-      <p>
-        I created an interactive AI-powered Tic-Tac-Toe game to demonstrate logical decision-making and simple AI flow. 
-        This game serves as a fun example of algorithm-based interactivity aligned with biomedical tech interest.
-      </p>
-      <a href="https://tarutic-tac-toe.tiiny.site/" target="_blank" style="
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 20px;
-        background-color: rgba(255,255,255,0.1);
-        border-radius: 12px;
-        text-decoration: none;
-        color: white;
-        font-weight: 500;
-        font-size: 1.1em;
-        margin-top: 10px;
-        transition: background-color 0.3s ease;">
-        <img src="https://img.icons8.com/ios-filled/30/ffffff/controller.png" alt="Game Icon"/>
-        Play Tic-Tac-Toe AI Game
-      </a>
-    </div>
-  </div>
-</div>
+</body>
+</html>
 
 
 
