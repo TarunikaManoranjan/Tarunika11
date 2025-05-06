@@ -1,3 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarunika Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 30px 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      margin-right: 20px;
+    }
+
+    .text-content h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .text-content p {
+      margin-top: 5px;
+      font-size: 1.2em;
+      color: #ddd;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .menu a {
+      width: 70%;
+      max-width: 600px;
+      padding: 20px;
+      margin: 15px 0;
+      background-color: rgba(255, 255, 255, 0.15);
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-size: 1.5em;
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .menu a:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: white;
+      color: #333;
+      margin: 5% auto;
+      padding: 20px 30px;
+      border-radius: 15px;
+      max-width: 800px;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Images/WhatsApp Image 2025-05-03 at 3.08.18 PM.jpeg" alt="Profile Photo" class="profile-img">
+  <div class="text-content">
+    <h1>Tarunika Manoranjan</h1>
+    <p>2nd Year Biomedical Engineering Student | Enthusiastic Learner | Nature Lover</p>
+  </div>
+</header>
+
+<div class="menu">
+  <a onclick="showModal('educationModal')">Education</a>
+  <a onclick="showModal('projectsModal')">Projects</a>
+  <a onclick="showModal('seminarModal')">Seminar</a>
+  <a onclick="showModal('workshopsModal')">Workshops</a>
+  <a onclick="showModal('certCurricularModal')">Certifications - Curricular</a>
+  <a onclick="showModal('certCoCurricularModal')">Certifications - Co Curricular</a>
+  <a onclick="showModal('stageModal')">Stage Performances / Theatre</a>
+  <a onclick="showModal('skillsModal')">Skills</a>
+  <a onclick="showModal('hobbiesModal')">Hobbies</a>
+  <a onclick="showModal('achievementsModal')">Achievements</a>
+  <a onclick="showModal('bioModal')">Bioinstrumentation & AI</a>
+</div>
+
+<!-- Modals -->
+
+<div id="educationModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('educationModal')">&times;</span>
+    <h2>Education Background</h2>
+    <p><strong>Preschool to 8th:</strong> Father Agnel School, Noida</p>
+    <p><strong>9th to 12th:</strong> SRM Public School, Guduvanchery</p>
+    <p><strong>College:</strong> SRM Institute of Science and Technology, Kattankulathur</p>
+    <p><strong>CGPA:</strong> Sem 1 - 9.39 | Sem 2 - 9.04 | Sem 3 - 9.79</p>
+    <p><strong>10th:</strong> 94% | <strong>12th:</strong> 86.3%</p>
+  </div>
+</div>
+
+<div id="projectsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('projectsModal')">&times;</span>
+    <h2>Projects</h2>
+    <ul>
+      <li>Wein Bridge Oscillator Circuit - Simulated in EasyEDA, converted into PCB and fabricated.</li>
+      <li>Monostable Multivibrator using NE555 Timer - Timing and pulse generation project.</li>
+      <li>Temperature Monitoring System using Arduino & DS18B20 Sensor.</li>
+      <li>Scleral Buckling - Physical model representation.</li>
+      <li>Blood Flow inside Nephron - Demonstrated using syringes, air pressure and water.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="seminarModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('seminarModal')">&times;</span>
+    <h2>Seminars</h2>
+    <ul>
+      <li>Stress-Strain Graph - Understanding material deformation.</li>
+      <li>Tissue Dynamics: Tissue Homeostasis - Maintaining balance in biological tissues.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="workshopsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('workshopsModal')">&times;</span>
+    <h2>Workshops</h2>
+    <h3>Curricular</h3>
+    <ul>
+      <li>Workshop on Writing Research Papers - SRM University</li>
+      <li>Hands-on PCB Workshop - SRM University (ECE Department)</li>
+    </ul>
+    <h3>Co-Curricular</h3>
+    <ul>
+      <li>Dance Workshops by Anu Viswa, Sonali Bhadauria, and Akansha Sharma</li>
+      <li>Former Trainee & Teacher at Prasanna Dance Studio - Earned Crew Member Title</li>
+      <li>Currently part of Raack Studios Dance Academy</li>
+    </ul>
+  </div>
+</div>
+
+<div id="certCurricularModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('certCurricularModal')">&times;</span>
+    <h2>Curricular Certifications</h2>
+    <p>Certifications in PCB Design, Research Methodology, and Biomedical Instrumentation Tools.</p>
+  </div>
+</div>
+
+<div id="certCoCurricularModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('certCoCurricularModal')">&times;</span>
+    <h2>Co-Curricular Certifications</h2>
+    <p>Certificates in dance training, public speaking, and creative arts from various academies and events.</p>
+  </div>
+</div>
+
+<div id="stageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('stageModal')">&times;</span>
+    <h2>Stage Performances / Theatre</h2>
+    <ul>
+      <li>MC for events at Jawaharlal Nehru Stadium and Patrician College Fest.</li>
+      <li>Stage performer at various college cultural programs and public platforms.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="skillsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('skillsModal')">&times;</span>
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>PowerPoint:</strong> Clarity-driven and visual presentations.</li>
+      <li><strong>Canva:</strong> Social media design and flyers.</li>
+      <li><strong>InShot:</strong> Professional video editing.</li>
+      <li><strong>KiCad & EasyEDA:</strong> PCB & circuit design.</li>
+      <li><strong>AutoCAD:</strong> Biomedical drawings and designs.</li>
+    </ul>
+  </div>
+</div>
+
+<div id="hobbiesModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('hobbiesModal')">&times;</span>
+    <h2>Hobbies & Interests</h2>
+    <ul>
+      <li>Western Dance</li>
+      <li>Fine Arts</li>
+      <li>Public Speaking</li>
+      <li>YouTube - Math & Dance Content</li>
+      <li>Instagram Creator & Influencer</li>
+    </ul>
+  </div>
+</div>
+
+<div id="achievementsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('achievementsModal')">&times;</span>
+    <h2>Achievements</h2>
+    <ul>
+      <li>🏆 1st Place - Youth United Council Dance Competition</li>
+      <li>🎤 MC - Patrician College Fest in presence of Tamilisai</li>
+      <li>🎙️ Host - Karma Yogi Trust event at JN Stadium</li>
+    </ul>
+  </div>
+</div>
+
+<div id="bioModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('bioModal')">&times;</span>
+    <h2>Bioinstrumentation & Artificial Intelligence</h2>
+    <p>
+      As a biomedical engineering student, I am deeply passionate about bioinstrumentation—the interface of biology and devices.
+      With a foundation in electronics and biomedical systems, I explore real-time diagnostics, monitoring systems, and innovative health solutions.
+      I am also intrigued by how AI is transforming diagnostics, predictive healthcare, and biomedical research.
+    </p>
+  </div>
+</div>
+
+<script>
+  function showModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  };
+</script>
+
+</body>
+</html>
+<!-- Social Media Links -->
+<footer>
+  <div class="social-links">
+    <a href="https://www.instagram.com/your_tarunika sanjiti manoranjan" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+    </a>
+    <a href="https://www.youtube.com/@sanjitimanoranjan11" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube">
+    </a>
+     <a href="https://www.youtube.com/@theoremthreadswithtarunika" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" alt="YouTube">
+    </a>
+    <a href="https://www.linkedin.com/in/your_linkedin_profile" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" alt="LinkedIn">
+    </a>
+  </div>
+  <p class="footer-text">© 2025 Tarunika Manoranjan. All rights reserved.</p>
+</footer>
+<!-- Add inside your Bioinstrumentation modal content -->
+<div class="section-box">
+  <h3>Interactive AI Game</h3>
+  <p>
+    I developed a fun and logic-based AI-powered Tic-Tac-Toe game as a creative side project.
+    This project represents how fundamental logic gates and AI logic can be visualized interactively.
+  </p>
+  <a href="https://tarutic-tac-toe.tiiny.site/" target="_blank" style="
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size: 1.1em;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;">
+    <img src="https://img.icons8.com/ios-filled/30/ffffff/controller.png" alt="Game Icon"/>
+    Play Tic-Tac-Toe AI Game
+  </a>
+</div>
+<!-- Bioinstrumentation and AI Modal -->
+<div id="bioinstrumentationModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('bioinstrumentationModal')">&times;</span>
+    <h2>Bioinstrumentation & AI</h2>
+    
+    <ul>
+      <li>Wein Bridge Oscillator Circuit – Simulated & fabricated using EasyEDA</li>
+      <li>Monostable Multivibrator using NE555 timer</li>
+      <li>Temperature Monitoring System using Arduino and DS18B20 sensor</li>
+      <li>Model of Scleral Buckling in Ophthalmology</li>
+      <li>Working blood flow inside nephron demonstrated using syringes, water & air pressure</li>
+    </ul>
+
+    <div class="section-box">
+      <h3>AI & Logic Game Project</h3>
+      <p>
+        I created an interactive AI-powered Tic-Tac-Toe game to demonstrate logical decision-making and simple AI flow. 
+        This game serves as a fun example of algorithm-based interactivity aligned with biomedical tech interest.
+      </p>
+      <a href="https://tarutic-tac-toe.tiiny.site/" target="_blank" style="
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 12px;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1.1em;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/controller.png" alt="Game Icon"/>
+        Play Tic-Tac-Toe AI Game
+      </a>
+    </div>
+  </div>
+</div> 
+ombinvything
+
+
+ChatGPT said:
+Tarunika Portfolio
+
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+<!DOCTYPE html>
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: white;
+      color: #333;
+      margin: 5% auto;
+      padding: 20px 30px;
+      border-radius: 15px;
+      max-width: 800px;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      color: #555;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding: 20px 10px;
+      color: white;
+    }
+
+    .social-links a img {
+      width: 30px;
+      margin: 0 10px;
+    }
+
+    .section-box {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Content starts from header -->
+Thanks for sharing the full HTML code! Your portfolio site is already well-designed — professional, clean, and personal. However, you mentioned wanting to combine everything, and I see a few opportunities to optimize and clean up the structure, especially regarding:
+
+🔧 Current Redundancy:
+There are two modals for Bioinstrumentation & AI — #bioModal and #bioinstrumentationModal. These should be merged.
+
+The Tic-Tac-Toe AI Game section is floating outside the modal. It should be moved inside the corresponding modal content.
+
+✅ Cleaned Up Plan:
+Here’s what I’ll do for you:
+
+Merge the duplicate Bioinstrumentation & AI modals.
+
+Move the Tic-Tac-Toe section into the merged modal.
+
+Ensure it's triggered by the same menu item.
+
+Fix footer placement inside <body> and apply minimal cleanup.
+
+Would you like me to now return the optimized full HTML code with all of these fixes applied?
+
+
+
+
+
+
+You said:
+dont change anything wantthe same layout with this added on in bioinstrumentations
+
+
+ChatGPT said:
+Perfect — I’ll keep your existing layout exactly the same and simply add the pacemaker content into the "Bioinstrumentation & AI" modal, as requested.
+
+Here’s the updated full code for the bioModal only (just this section is updated — no layout or design changes made):
+
+✅ Replace your current bioModal (the one with id="bioModal") with this version:
+html
+Copy
+Edit
+<div id="bioModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('bioModal')">&times;</span>
+    <h2>Bioinstrumentation & Artificial Intelligence</h2>
+    <p>
+      As a biomedical engineering student, I am deeply passionate about bioinstrumentation—the interface of biology and devices.
+      With a foundation in electronics and biomedical systems, I explore real-time diagnostics, monitoring systems, and innovative health solutions.
+      I am also intrigued by how AI is transforming diagnostics, predictive healthcare, and biomedical research.
+    </p>
+
+    <div class="section-box">
+      <h3>AI & Logic Game Project</h3>
+      <p>
+        I created an interactive AI-powered Tic-Tac-Toe game to demonstrate logical decision-making and simple AI flow. 
+        This game serves as a fun example of algorithm-based interactivity aligned with biomedical tech interest.
+      </p>
+      <a href="https://tarutic-tac-toe.tiiny.site/" target="_blank" style="
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 12px;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1.1em;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/controller.png" alt="Game Icon"/>
+        Play Tic-Tac-Toe AI Game
+      </a>
+    </div>
+
+    <hr style="margin: 25px 0; border-color: rgba(255,255,255,0.2);" />
+
+    <h3>Evolution of Pacemakers (How They Changed Over Time)</h3>
+    <p>Pacemakers have improved a lot since they were first created. Here’s how they developed over time:</p>
+
+    <h4>Early Pacemakers (1930s–1950s)</h4>
+    <ul>
+      <li>The first pacemakers were big and used outside the body.</li>
+      <li>In 1958, doctors in Sweden made the first implantable pacemaker. It didn’t last long, but it was the beginning of modern pacemakers.</li>
+    </ul>
+
+    <h4>Better Designs (1960s–1980s)</h4>
+    <ul>
+      <li>New pacemakers had longer battery life (thanks to lithium batteries).</li>
+      <li>Some could pace two heart chambers instead of just one.</li>
+      <li>They became smaller and more reliable.</li>
+    </ul>
+
+    <h4>Modern Pacemakers (1990s–Today)</h4>
+    <ul>
+      <li>Now pacemakers are very small and can be monitored remotely.</li>
+      <li>Some are even MRI-safe.</li>
+      <li>New types like leadless pacemakers don’t need wires at all.</li>
+    </ul>
+
+    <h3>Two Types of Pacemakers</h3>
+    <h4>1. Single-Chamber Pacemaker</h4>
+    <p><strong>What it does:</strong> Sends signals to just one part of the heart—either the upper part (atrium) or the lower part (ventricle).</p>
+    <p><strong>When it’s used:</strong> For people whose heart beats too slowly, and only one chamber needs help.</p>
+    <p><strong>Why it's good:</strong></p>
+    <ul>
+      <li>Simple to put in</li>
+      <li>Fewer problems because it has only one wire</li>
+    </ul>
+    <p><strong>Limitations:</strong></p>
+    <ul>
+      <li>Doesn’t work as well for people who need both chambers paced</li>
+    </ul>
+
+    <h4>2. Leadless Pacemaker</h4>
+    <p><strong>What it is:</strong> A very small pacemaker that goes directly into the heart—no wires or surgery needed on the chest.</p>
+    <p><strong>When it’s used:</strong> For people who might have problems with wires or infections.</p>
+    <p><strong>Why it's good:</strong></p>
+    <ul>
+      <li>No scars</li>
+      <li>Lower chance of infection</li>
+      <li>Fast recovery</li>
+    </ul>
+    <p><strong>Limitations:</strong></p>
+    <ul>
+      <li>Works only for the lower part of the heart (ventricle)</li>
+      <li>Can be hard to remove if there’s a problem</li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 <div id="bioModal" class="modal">
   <div class="modal-content">
     <span class="close-btn" onclick="closeModal('bioModal')">&times;</span>
