@@ -1,172 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarunika Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
+<div id="bioModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('bioModal')">&times;</span>
+    <h2>Bioinstrumentation & Artificial Intelligence</h2>
+    <p>
+      As a biomedical engineering student, I am deeply passionate about bioinstrumentation—the interface of biology and devices.
+      With a foundation in electronics and biomedical systems, I explore real-time diagnostics, monitoring systems, and innovative health solutions.
+      I am also intrigued by how AI is transforming diagnostics, predictive healthcare, and biomedical research.
+    </p>
 
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 30px 20px;
-      background-color: rgba(0, 0, 0, 0.6);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+    <div class="section-box">
+      <h3>AI & Logic Game Project</h3>
+      <p>
+        I created an interactive AI-powered Tic-Tac-Toe game to demonstrate logical decision-making and simple AI flow. 
+        This game serves as a fun example of algorithm-based interactivity aligned with biomedical tech interest.
+      </p>
+      <a href="https://tarutic-tac-toe.tiiny.site/" target="_blank" style="
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 20px;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 12px;
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1.1em;
+        margin-top: 10px;
+        transition: background-color 0.3s ease;">
+        <img src="https://img.icons8.com/ios-filled/30/ffffff/controller.png" alt="Game Icon"/>
+        Play Tic-Tac-Toe AI Game
+      </a>
+    </div>
 
-    .profile-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-      margin-right: 20px;
-    }
+    <hr style="margin: 25px 0; border-color: rgba(255,255,255,0.2);" />
 
-    .text-content h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
+    <h3>Evolution of Pacemakers (How They Changed Over Time)</h3>
+    <p>Pacemakers have improved a lot since they were first created. Here’s how they developed over time:</p>
 
-    .text-content p {
-      margin-top: 5px;
-      font-size: 1.2em;
-      color: #ddd;
-    }
+    <h4>Early Pacemakers (1930s–1950s)</h4>
+    <ul>
+      <li>The first pacemakers were big and used outside the body.</li>
+      <li>In 1958, doctors in Sweden made the first implantable pacemaker. It didn’t last long, but it was the beginning of modern pacemakers.</li>
+    </ul>
 
-    .menu {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 80vh;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
+    <h4>Better Designs (1960s–1980s)</h4>
+    <ul>
+      <li>New pacemakers had longer battery life (thanks to lithium batteries).</li>
+      <li>Some could pace two heart chambers instead of just one.</li>
+      <li>They became smaller and more reliable.</li>
+    </ul>
 
-    .menu a {
-      width: 70%;
-      max-width: 600px;
-      padding: 20px;
-      margin: 15px 0;
-      background-color: rgba(255, 255, 255, 0.15);
-      text-align: center;
-      text-decoration: none;
-      color: white;
-      font-size: 1.5em;
-      border-radius: 15px;
-      backdrop-filter: blur(8px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      transition: 0.3s;
-      cursor: pointer;
-    }
+    <h4>Modern Pacemakers (1990s–Today)</h4>
+    <ul>
+      <li>Now pacemakers are very small and can be monitored remotely.</li>
+      <li>Some are even MRI-safe.</li>
+      <li>New types like leadless pacemakers don’t need wires at all.</li>
+    </ul>
 
-    .menu a:hover {
-      background-color: rgba(255, 255, 255, 0.25);
-      transform: scale(1.05);
-    }
+    <h3>Two Types of Pacemakers</h3>
+    <h4>1. Single-Chamber Pacemaker</h4>
+    <p><strong>What it does:</strong> Sends signals to just one part of the heart—either the upper part (atrium) or the lower part (ventricle).</p>
+    <p><strong>When it’s used:</strong> For people whose heart beats too slowly, and only one chamber needs help.</p>
+    <p><strong>Why it's good:</strong></p>
+    <ul>
+      <li>Simple to put in</li>
+      <li>Fewer problems because it has only one wire</li>
+    </ul>
+    <p><strong>Limitations:</strong></p>
+    <ul>
+      <li>Doesn’t work as well for people who need both chambers paced</li>
+    </ul>
 
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      background-color: rgba(0,0,0,0.6);
-    }
-
-    .modal-content {
-      background-color: white;
-      color: #333;
-      margin: 5% auto;
-      padding: 20px 30px;
-      border-radius: 15px;
-      max-width: 800px;
-      position: relative;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 24px;
-      color: #555;
-      cursor: pointer;
-    }
-
-    .close-btn:hover {
-      color: #000;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      background-color: rgba(0, 0, 0, 0.6);
-      text-align: center;
-      padding: 20px 10px;
-      color: white;
-    }
-
-    .social-links a img {
-      width: 30px;
-      margin: 0 10px;
-    }
-
-    .section-box {
-      margin-top: 20px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      color: #333;
-    }
-  </style>
-</head>
-<body>
-
-<!-- Content starts from header -->
-<!-- All modal content and section content are already in your full pasted code -->
-<!-- This canvas now includes everything from your latest version including footer, extra modals, and game link -->
-
-<!-- Your script and interactive logic -->
-<script>
-  function showModal(id) {
-    document.getElementById(id).style.display = "block";
-  }
-
-  function closeModal(id) {
-    document.getElementById(id).style.display = "none";
-  }
-
-  window.onclick = function(event) {
-    document.querySelectorAll('.modal').forEach(modal => {
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  };
-</script>
-
-</body>
-</html>
+    <h4>2. Leadless Pacemaker</h4>
+    <p><strong>What it is:</strong> A very small pacemaker that goes directly into the heart—no wires or surgery needed on the chest.</p>
+    <p><strong>When it’s used:</strong> For people who might have problems with wires or infections.</p>
+    <p><strong>Why it's good:</strong></p>
+    <ul>
+      <li>No scars</li>
+      <li>Lower chance of infection</li>
+      <li>Fast recovery</li>
+    </ul>
+    <p><strong>Limitations:</strong></p>
+    <ul>
+      <li>Works only for the lower part of the heart (ventricle)</li>
+      <li>Can be hard to remove if there’s a problem</li>
+    </ul>
+  </div>
+</div>
 
 
  
